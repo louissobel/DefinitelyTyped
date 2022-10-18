@@ -3117,7 +3117,7 @@ type ReactManagedAttributes<C, P> = C extends { propTypes: infer T; defaultProps
             ? Defaultize<P, D>
             : P;
 
-declare global {
+declare module "React" {
     namespace JSX {
         interface Element extends React.ReactElement<any, any> { }
         interface ElementClass extends React.Component<any> {
